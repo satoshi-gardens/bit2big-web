@@ -5,18 +5,18 @@ const Features = () => {
   const features = [
     {
       icon: <Wallet className="w-6 h-6 text-white" />,
-      title: "Mobile Banking",
-      description: "Manage your finances on the go with our secure mobile banking platform"
+      title: "Blockchain Solutions",
+      description: "Connect to a financial highway with our blockchain solutions, sparking new business opportunities and success."
     },
     {
       icon: <Shield className="w-6 h-6 text-white" />,
-      title: "Secure Transactions",
-      description: "Bank-grade security for all your transactions and personal data"
+      title: "Digital Finance",
+      description: "World-class global Digital Finance Solutions based on Blockchain and Cryptocurrency Investment."
     },
     {
       icon: <CreditCard className="w-6 h-6 text-white" />,
-      title: "Digital Cards",
-      description: "Virtual and physical cards with advanced control features"
+      title: "Training & Education",
+      description: "International Accredited Blockchain Trainings and community meetups to bridge the knowledge gap."
     }
   ];
 
@@ -27,10 +27,10 @@ const Features = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <h2 className="text-4xl font-bold text-white">
-              All the experience in the new application
+              Empowering Africa Through Blockchain Technology
             </h2>
             <p className="text-xl text-white/60">
-              Simple transfers, payments for utilities, functional statements, card settings, for which you used to have to go to the branch online-banking
+              We believe we can close the missing link between individuals and the financial world with Blockchain technology, making digital finance services accessible to all.
             </p>
           </div>
           <div className="grid gap-6">

@@ -7,10 +7,10 @@ const Hero = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <div className="space-y-8">
           <h1 className="text-5xl md:text-6xl font-bold text-white leading-tight">
-            Responsible Banking Made Easier
+            Making Digital Assets Matter
           </h1>
           <p className="text-lg text-white/80 max-w-xl">
-            Financial services, including P2P payments, balance check and top-ups - are now available from any mobile app, including all messaging ones.
+            KIPYA | Bit2Big is a FinTech company offering world-class global Digital Finance Solutions based on Blockchain, Cryptocurrency Investment, Blockchain Services and International Accredited Blockchain Trainings.
           </p>
           <Button className="px-8 py-6 text-lg bg-white text-black hover:bg-white/90 flex items-center gap-2">
             <Download className="w-5 h-5" />
@@ -18,16 +18,16 @@ const Hero = () => {
           </Button>
           <div className="grid grid-cols-3 gap-8 pt-8">
             <div>
-              <div className="text-3xl font-bold text-white">5000+</div>
-              <div className="text-white/60">Active users</div>
+              <div className="text-3xl font-bold text-white">3+</div>
+              <div className="text-white/60">Countries</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-white">30.3k</div>
-              <div className="text-white/60">Download</div>
+              <div className="text-3xl font-bold text-white">1000+</div>
+              <div className="text-white/60">Meetups</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-white">1200+</div>
-              <div className="text-white/60">Reviews</div>
+              <div className="text-3xl font-bold text-white">24/7</div>
+              <div className="text-white/60">Support</div>
             </div>
           </div>
         </div>
