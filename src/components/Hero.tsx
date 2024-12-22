@@ -1,6 +1,3 @@
-import { Button } from "@/components/ui/button";
-import { Download } from "lucide-react";
-
 const Hero = () => {
   return (
     <div className="min-h-screen flex items-center justify-center px-4 pt-20 bg-background">
@@ -12,10 +9,6 @@ const Hero = () => {
           <p className="text-lg text-white/80 max-w-xl">
             bit2Big is a Swiss technology company providing world-class Digital Finance Solutions, Cybersecurity Services, and Professional Training across Switzerland and Africa. Currently operating in Uganda, Rwanda, and Nigeria.
           </p>
-          <Button className="px-8 py-6 text-lg bg-white text-black hover:bg-white/90 flex items-center gap-2">
-            <Download className="w-5 h-5" />
-            Download Application
-          </Button>
           <div className="grid grid-cols-3 gap-8 pt-8">
             <div>
               <div className="text-3xl font-bold text-white">4+</div>
