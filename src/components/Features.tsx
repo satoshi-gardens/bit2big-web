@@ -1,22 +1,27 @@
 import { Card } from "@/components/ui/card";
-import { Wallet, Shield, CreditCard } from "lucide-react";
+import { Shield, Brain, Code, Terminal } from "lucide-react";
 
 const Features = () => {
   const features = [
     {
-      icon: <Wallet className="w-6 h-6 text-white" />,
-      title: "Blockchain Solutions",
-      description: "Connect to a financial highway with our blockchain solutions, sparking new business opportunities and success."
-    },
-    {
       icon: <Shield className="w-6 h-6 text-white" />,
-      title: "Digital Finance",
-      description: "World-class global Digital Finance Solutions based on Blockchain and Cryptocurrency Investment."
+      title: "Cybersecurity",
+      description: "Comprehensive security solutions including Awareness Training, Assessments, and SecOps Implementation."
     },
     {
-      icon: <CreditCard className="w-6 h-6 text-white" />,
-      title: "Training & Education",
-      description: "International Accredited Blockchain Trainings and community meetups to bridge the knowledge gap."
+      icon: <Code className="w-6 h-6 text-white" />,
+      title: "Blockchain",
+      description: "Expert services in Blockchain Development, Professional Training, and Cryptocurrency Trading guidance."
+    },
+    {
+      icon: <Brain className="w-6 h-6 text-white" />,
+      title: "AI & Training",
+      description: "Cutting-edge AI training programs and specialized courses in Cryptocurrency Trading and Cybersecurity."
+    },
+    {
+      icon: <Terminal className="w-6 h-6 text-white" />,
+      title: "IT Consulting",
+      description: "Professional consulting in DevOps, SecOps, Linux hardening, and comprehensive IT solutions."
     }
   ];
 
@@ -27,13 +32,13 @@ const Features = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <h2 className="text-4xl font-bold text-white">
-              Empowering Africa Through Blockchain Technology
+              Empowering Digital Transformation
             </h2>
             <p className="text-xl text-white/60">
-              We believe we can close the missing link between individuals and the financial world with Blockchain technology, making digital finance services accessible to all.
+              As a Swiss company expanding across Africa, we bridge the technological gap through comprehensive blockchain solutions, cybersecurity services, and cutting-edge AI training programs.
             </p>
           </div>
-          <div className="grid gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {features.map((feature, index) => (
               <Card 
                 key={index} 

@@ -10,7 +10,7 @@ const Hero = () => {
             Making Digital Assets Matter
           </h1>
           <p className="text-lg text-white/80 max-w-xl">
-            KIPYA | Bit2Big is a FinTech company offering world-class global Digital Finance Solutions based on Blockchain, Cryptocurrency Investment, Blockchain Services and International Accredited Blockchain Trainings.
+            bit2Big is a Swiss technology company providing world-class Digital Finance Solutions, Cybersecurity Services, and Professional Training across Switzerland and Africa. Currently operating in Uganda, Rwanda, and Nigeria.
           </p>
           <Button className="px-8 py-6 text-lg bg-white text-black hover:bg-white/90 flex items-center gap-2">
             <Download className="w-5 h-5" />
@@ -18,12 +18,12 @@ const Hero = () => {
           </Button>
           <div className="grid grid-cols-3 gap-8 pt-8">
             <div>
-              <div className="text-3xl font-bold text-white">3+</div>
+              <div className="text-3xl font-bold text-white">4+</div>
               <div className="text-white/60">Countries</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-white">1000+</div>
-              <div className="text-white/60">Meetups</div>
+              <div className="text-3xl font-bold text-white">3</div>
+              <div className="text-white/60">Core Services</div>
             </div>
             <div>
               <div className="text-3xl font-bold text-white">24/7</div>
