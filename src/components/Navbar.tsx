@@ -9,9 +9,9 @@ const Navbar = () => {
         <Link to="/" className="text-2xl font-bold text-white">bit2Big</Link>
         <div className="hidden md:flex items-center space-x-8">
           <Link to="/it-consulting" className="text-white/80 hover:text-white transition-colors">IT Consulting</Link>
+          <Link to="/ai-training" className="text-white/80 hover:text-white transition-colors">AI & Training</Link>
           <Link to="/cybersecurity" className="text-white/80 hover:text-white transition-colors">Cybersecurity</Link>
           <Link to="/blockchain" className="text-white/80 hover:text-white transition-colors">Blockchain</Link>
-          <Link to="/ai-training" className="text-white/80 hover:text-white transition-colors">AI & Training</Link>
           <Link to="/contact">
             <Button 
               className="bg-[#F2FF44] text-black hover:bg-[#E2EF34] flex items-center gap-2"
