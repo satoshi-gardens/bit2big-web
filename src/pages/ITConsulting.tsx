@@ -1,6 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Check } from "lucide-react";
+import { Check, Cloud, Globe, Code, Shield } from "lucide-react";
 
 const ITConsulting = () => {
   return (
@@ -49,25 +49,32 @@ const ITConsulting = () => {
               </div>
               
               <div className="space-y-6">
-                <h2 className="text-3xl font-bold">Why Choose Us</h2>
-                <ul className="space-y-4">
-                  <li className="glass-effect p-4 rounded-xl">
-                    <h3 className="font-semibold mb-2">Global Expertise</h3>
-                    <p className="text-white/60">International team with diverse industry experience</p>
-                  </li>
-                  <li className="glass-effect p-4 rounded-xl">
-                    <h3 className="font-semibold mb-2">Tailored Solutions</h3>
-                    <p className="text-white/60">Customized approach for your specific needs</p>
-                  </li>
-                  <li className="glass-effect p-4 rounded-xl">
-                    <h3 className="font-semibold mb-2">Innovation Focus</h3>
-                    <p className="text-white/60">Latest technologies and methodologies</p>
-                  </li>
-                  <li className="glass-effect p-4 rounded-xl">
-                    <h3 className="font-semibold mb-2">Proven Track Record</h3>
-                    <p className="text-white/60">Successful projects across multiple regions</p>
-                  </li>
-                </ul>
+                <h2 className="text-3xl font-bold">Additional Services</h2>
+                <div className="grid gap-6">
+                  <div className="glass-effect p-6 rounded-xl">
+                    <div className="flex items-center gap-3 mb-3">
+                      <Globe className="w-6 h-6 text-[#F2FF44]" />
+                      <h3 className="font-semibold text-xl">Website Hosting & Development</h3>
+                    </div>
+                    <p className="text-white/60">Professional website hosting solutions and custom web development services for businesses of all sizes. We build scalable platforms tailored to your needs.</p>
+                  </div>
+                  
+                  <div className="glass-effect p-6 rounded-xl">
+                    <div className="flex items-center gap-3 mb-3">
+                      <Code className="w-6 h-6 text-[#F2FF44]" />
+                      <h3 className="font-semibold text-xl">Platform Development</h3>
+                    </div>
+                    <p className="text-white/60">Custom platform development services including e-commerce solutions, learning management systems, and enterprise applications.</p>
+                  </div>
+                  
+                  <div className="glass-effect p-6 rounded-xl">
+                    <div className="flex items-center gap-3 mb-3">
+                      <Cloud className="w-6 h-6 text-[#F2FF44]" />
+                      <h3 className="font-semibold text-xl">Cloud Security</h3>
+                    </div>
+                    <p className="text-white/60">Comprehensive cloud security solutions to protect your digital assets, ensure compliance, and maintain data integrity across cloud platforms.</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
