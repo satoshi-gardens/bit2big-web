@@ -7,7 +7,7 @@ const Hero = () => {
             Making Digital Assets Matter
           </h1>
           <p className="text-lg text-white/80 max-w-xl">
-            bit2Big is a Swiss technology company providing world-class Digital Finance Solutions, Cybersecurity Services, and Professional Training across Switzerland and Africa. Currently operating in Uganda, Rwanda, and Nigeria.
+            Founded in Switzerland, bit2Big specializes in digital finance solutions, cybersecurity, and professional training. Our expertise in cryptocurrency trading and blockchain technology has established us as a trusted leader across Switzerland and strategic locations in Africa.
           </p>
           <div className="grid grid-cols-3 gap-8 pt-8">
             <div>
