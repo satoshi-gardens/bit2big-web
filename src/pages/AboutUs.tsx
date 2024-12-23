@@ -1,6 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Building, Users, Globe } from "lucide-react";
+import { Building, Users, Globe, Coins } from "lucide-react";
 
 const AboutUs = () => {
   return (
@@ -59,7 +59,7 @@ const AboutUs = () => {
                 </div>
                 <div className="glass-effect p-6 rounded-xl">
                   <h3 className="font-semibold mb-2">Uganda</h3>
-                  <p className="text-white/60">East African hub for technology solutions</p>
+                  <p className="text-white/60">East African hub for technology solutions and home to Counter 25 OTC desks</p>
                 </div>
                 <div className="glass-effect p-6 rounded-xl">
                   <h3 className="font-semibold mb-2">Nigeria</h3>
@@ -68,6 +68,36 @@ const AboutUs = () => {
                 <div className="glass-effect p-6 rounded-xl">
                   <h3 className="font-semibold mb-2">Rwanda</h3>
                   <p className="text-white/60">Innovation center for emerging technologies</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-12">
+              <div className="flex items-center gap-4 mb-6">
+                <Coins className="w-8 h-8 text-[#F2FF44]" />
+                <h2 className="text-2xl font-bold">Counter 25 - OTC Trading Desk</h2>
+              </div>
+              <div className="glass-effect p-6 rounded-xl">
+                <div className="grid md:grid-cols-2 gap-8">
+                  <div>
+                    <h3 className="text-xl font-semibold mb-4">Our OTC Services</h3>
+                    <p className="text-white/80 mb-4">
+                      Counter 25 operates three strategic locations across Uganda, providing professional over-the-counter cryptocurrency trading services. Our OTC desks offer personalized service, competitive rates, and secure transactions for both retail and institutional clients.
+                    </p>
+                    <div className="space-y-2 text-white/60">
+                      <p>• Professional cryptocurrency trading services</p>
+                      <p>• Secure and compliant transactions</p>
+                      <p>• Competitive market rates</p>
+                      <p>• Expert trading guidance</p>
+                    </div>
+                  </div>
+                  <div className="relative rounded-xl overflow-hidden">
+                    <img 
+                      src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81"
+                      alt="Counter 25 Trading Desk"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
