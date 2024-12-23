@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Download = () => {
   const handleScheduleCall = () => {
-    window.open("https://calendly.com/bit2big/15min", "_blank");
+    window.open("https://cal.com/bit2big/15min", "_blank");
   };
 
   return (
