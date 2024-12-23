@@ -1,5 +1,6 @@
 import { Github, Twitter, Linkedin } from "lucide-react";
 import { Button } from "./ui/button";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -28,19 +29,19 @@ const Footer = () => {
           <div className="space-y-4">
             <h4 className="text-lg font-semibold text-white">Services</h4>
             <ul className="space-y-2">
-              <li><a href="/it-consulting" className="text-white/60 hover:text-white transition-colors">IT Consulting</a></li>
-              <li><a href="/cybersecurity" className="text-white/60 hover:text-white transition-colors">Cybersecurity</a></li>
-              <li><a href="/blockchain" className="text-white/60 hover:text-white transition-colors">Blockchain</a></li>
-              <li><a href="/ai-training" className="text-white/60 hover:text-white transition-colors">AI & Training</a></li>
+              <li><Link to="/it-consulting" className="text-white/60 hover:text-white transition-colors">IT Consulting</Link></li>
+              <li><Link to="/cybersecurity" className="text-white/60 hover:text-white transition-colors">Cybersecurity</Link></li>
+              <li><Link to="/blockchain" className="text-white/60 hover:text-white transition-colors">Blockchain</Link></li>
+              <li><Link to="/ai-training" className="text-white/60 hover:text-white transition-colors">AI & Training</Link></li>
             </ul>
           </div>
           
           <div className="space-y-4">
             <h4 className="text-lg font-semibold text-white">Company</h4>
             <ul className="space-y-2">
-              <li><a href="#about" className="text-white/60 hover:text-white transition-colors">About Us</a></li>
+              <li><Link to="/about" className="text-white/60 hover:text-white transition-colors">About Us</Link></li>
               <li><a href="#careers" className="text-white/60 hover:text-white transition-colors">Careers</a></li>
-              <li><a href="#contact" className="text-white/60 hover:text-white transition-colors">Contact</a></li>
+              <li><Link to="/contact" className="text-white/60 hover:text-white transition-colors">Contact</Link></li>
               <li><a href="#blog" className="text-white/60 hover:text-white transition-colors">Blog</a></li>
             </ul>
           </div>

@@ -12,13 +12,14 @@ const Navbar = () => {
           <Link to="/cybersecurity" className="text-white/80 hover:text-white transition-colors">Cybersecurity</Link>
           <Link to="/blockchain" className="text-white/80 hover:text-white transition-colors">Blockchain</Link>
           <Link to="/ai-training" className="text-white/80 hover:text-white transition-colors">AI & Training</Link>
-          <Button 
-            className="bg-[#F2FF44] text-black hover:bg-[#E2EF34] flex items-center gap-2"
-            onClick={() => window.location.href = 'mailto:contact@bit2big.com'}
-          >
-            Contact Us
-            <Mail className="w-4 h-4" />
-          </Button>
+          <Link to="/contact">
+            <Button 
+              className="bg-[#F2FF44] text-black hover:bg-[#E2EF34] flex items-center gap-2"
+            >
+              Contact Us
+              <Mail className="w-4 h-4" />
+            </Button>
+          </Link>
         </div>
       </div>
     </nav>
