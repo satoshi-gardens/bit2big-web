@@ -11,16 +11,16 @@ const Hero = () => {
           </p>
           <div className="grid grid-cols-3 gap-8 pt-8">
             <div>
-              <div className="text-3xl font-bold text-white">4+</div>
-              <div className="text-white/60">Countries</div>
+              <div className="text-3xl font-bold text-white">10+</div>
+              <div className="text-white/60">Enterprise Solutions</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-white">3</div>
-              <div className="text-white/60">Core Services</div>
+              <div className="text-3xl font-bold text-white">5+</div>
+              <div className="text-white/60">Years Experience</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-white">24/7</div>
-              <div className="text-white/60">Support</div>
+              <div className="text-3xl font-bold text-white">100%</div>
+              <div className="text-white/60">Client Satisfaction</div>
             </div>
           </div>
         </div>
