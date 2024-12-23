@@ -26,10 +26,10 @@ const AboutUs = () => {
                   <h2 className="text-2xl font-bold">Our Company</h2>
                 </div>
                 <p className="text-white/80">
-                  Founded with a vision to bridge the technological gap between continents, 
-                  bit2Big has established itself as a premier technology solutions provider. 
-                  Our commitment to excellence and innovation drives us to deliver 
-                  cutting-edge solutions that empower businesses across Africa and Europe.
+                  Founded in Uganda and conceived with Swiss inspiration, bit2Big emerged 
+                  with a vision to bridge the technological gap between continents. Our 
+                  commitment to excellence and innovation drives us to deliver cutting-edge 
+                  solutions that empower businesses across Africa and Switzerland.
                 </p>
               </div>
               
