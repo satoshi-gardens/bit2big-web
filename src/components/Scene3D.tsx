@@ -15,32 +15,33 @@ const Scene3D = () => {
     renderer.setSize(mountRef.current.clientWidth, mountRef.current.clientHeight);
     mountRef.current.appendChild(renderer.domElement);
 
-    // Create floating cube
-    const geometry = new THREE.IcosahedronGeometry(1, 0);
+    // Create floating shape
+    const geometry = new THREE.IcosahedronGeometry(2, 1); // Increased size and detail
     const material = new THREE.MeshPhongMaterial({ 
       color: '#8989DE',
       wireframe: true,
       transparent: true,
-      opacity: 0.7
+      opacity: 0.9 // Increased opacity
     });
-    const cube = new THREE.Mesh(geometry, material);
+    const shape = new THREE.Mesh(geometry, material);
 
     // Add lighting
-    const ambientLight = new THREE.AmbientLight(0x404040);
-    const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
+    const ambientLight = new THREE.AmbientLight(0x404040, 2); // Increased intensity
+    const directionalLight = new THREE.DirectionalLight(0xffffff, 2); // Increased intensity
     directionalLight.position.set(1, 1, 1);
     
     scene.add(ambientLight);
     scene.add(directionalLight);
-    scene.add(cube);
+    scene.add(shape);
 
-    camera.position.z = 5;
+    camera.position.z = 6; // Adjusted camera position
 
     // Animation
     const animate = () => {
       requestAnimationFrame(animate);
-      cube.rotation.x += 0.005;
-      cube.rotation.y += 0.005;
+      shape.rotation.x += 0.003;
+      shape.rotation.y += 0.003;
+      shape.position.y = Math.sin(Date.now() * 0.001) * 0.3; // Add floating effect
       renderer.render(scene, camera);
     };
 
@@ -65,7 +66,7 @@ const Scene3D = () => {
     };
   }, []);
 
-  return <div ref={mountRef} className="absolute inset-0 -z-10" />;
+  return <div ref={mountRef} className="absolute inset-0 -z-10 min-h-screen" />;
 };
 
 export default Scene3D;
