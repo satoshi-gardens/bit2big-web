@@ -15,33 +15,80 @@ const Scene3D = () => {
     renderer.setSize(window.innerWidth, window.innerHeight);
     mountRef.current.appendChild(renderer.domElement);
 
-    // Create floating shape
-    const geometry = new THREE.IcosahedronGeometry(3, 1); // Increased size further
-    const material = new THREE.MeshPhongMaterial({ 
+    // Create AI representation (Brain-like structure)
+    const brainGeometry = new THREE.IcosahedronGeometry(2, 2);
+    const brainMaterial = new THREE.MeshPhongMaterial({ 
       color: '#8989DE',
       wireframe: true,
       transparent: true,
-      opacity: 0.95 // Increased opacity further
+      opacity: 0.8
     });
-    const shape = new THREE.Mesh(geometry, material);
+    const brain = new THREE.Mesh(brainGeometry, brainMaterial);
+    brain.position.set(-4, 2, 0);
+    scene.add(brain);
+
+    // Create Blockchain representation (Connected cubes)
+    const blockchainGroup = new THREE.Group();
+    const cubeGeometry = new THREE.BoxGeometry(1, 1, 1);
+    const cubeMaterial = new THREE.MeshPhongMaterial({ 
+      color: '#F2FF44',
+      wireframe: true,
+      transparent: true,
+      opacity: 0.8
+    });
+
+    // Create chain of cubes
+    for (let i = 0; i < 4; i++) {
+      const cube = new THREE.Mesh(cubeGeometry, cubeMaterial);
+      cube.position.set(i * 1.5, 0, 0);
+      blockchainGroup.add(cube);
+    }
+    blockchainGroup.position.set(2, -2, 0);
+    scene.add(blockchainGroup);
+
+    // Create Crypto Payments representation (Coin-like torus)
+    const coinGeometry = new THREE.TorusGeometry(1.5, 0.4, 16, 50);
+    const coinMaterial = new THREE.MeshPhongMaterial({ 
+      color: '#E6E4DD',
+      wireframe: true,
+      transparent: true,
+      opacity: 0.8
+    });
+    const coin = new THREE.Mesh(coinGeometry, coinMaterial);
+    coin.position.set(4, 3, 0);
+    coin.rotation.x = Math.PI / 4;
+    scene.add(coin);
 
     // Add lighting
-    const ambientLight = new THREE.AmbientLight(0x404040, 3); // Increased intensity further
-    const directionalLight = new THREE.DirectionalLight(0xffffff, 3); // Increased intensity further
+    const ambientLight = new THREE.AmbientLight(0x404040, 3);
+    const directionalLight = new THREE.DirectionalLight(0xffffff, 3);
     directionalLight.position.set(1, 1, 1);
     
     scene.add(ambientLight);
     scene.add(directionalLight);
-    scene.add(shape);
 
-    camera.position.z = 8; // Moved camera back further
+    camera.position.z = 12;
 
     // Animation
     const animate = () => {
       requestAnimationFrame(animate);
-      shape.rotation.x += 0.002;
-      shape.rotation.y += 0.002;
-      shape.position.y = Math.sin(Date.now() * 0.001) * 0.5; // Increased floating range
+      
+      // Rotate brain
+      brain.rotation.x += 0.002;
+      brain.rotation.y += 0.002;
+      brain.position.y += Math.sin(Date.now() * 0.001) * 0.01;
+
+      // Rotate blockchain cubes
+      blockchainGroup.children.forEach((cube, index) => {
+        cube.rotation.x += 0.003;
+        cube.rotation.y += 0.003;
+        cube.position.y = Math.sin(Date.now() * 0.001 + index) * 0.2;
+      });
+
+      // Rotate coin
+      coin.rotation.y += 0.005;
+      coin.position.y += Math.sin(Date.now() * 0.001) * 0.01;
+
       renderer.render(scene, camera);
     };
 
@@ -64,8 +111,12 @@ const Scene3D = () => {
     return () => {
       window.removeEventListener('resize', handleResize);
       mountRef.current?.removeChild(renderer.domElement);
-      geometry.dispose();
-      material.dispose();
+      brainGeometry.dispose();
+      brainMaterial.dispose();
+      cubeGeometry.dispose();
+      cubeMaterial.dispose();
+      coinGeometry.dispose();
+      coinMaterial.dispose();
     };
   }, []);
 
