@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import { Brain, Bot, Lightbulb, BookOpen } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import Scene3D from "@/components/Scene3D";
 
 const AITraining = () => {
   const services = [
@@ -25,6 +26,7 @@ const AITraining = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Scene3D />
       <Navbar />
       <div className="pt-20 px-4">
         <div className="max-w-7xl mx-auto py-20">
