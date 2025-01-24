@@ -153,10 +153,25 @@ const Scene3D = () => {
       particleGeometry.dispose();
       particleMaterial.dispose();
       connectionMaterial.dispose();
+      renderer.dispose();
     };
   }, []);
 
-  return <div ref={mountRef} style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', zIndex: -1, pointerEvents: 'none' }} />;
+  return (
+    <div 
+      ref={mountRef} 
+      style={{ 
+        position: 'fixed', 
+        top: 0, 
+        left: 0, 
+        width: '100vw', 
+        height: '100vh', 
+        zIndex: 0,
+        pointerEvents: 'none',
+        overflow: 'hidden'
+      }} 
+    />
+  );
 };
 
 export default Scene3D;

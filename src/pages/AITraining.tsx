@@ -25,10 +25,11 @@ const AITraining = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="relative min-h-screen bg-background">
       <Scene3D />
-      <Navbar />
-      <div className="pt-20 px-4">
+      <div className="relative z-10">
+        <Navbar />
+        <div className="pt-20 px-4">
         <div className="max-w-7xl mx-auto py-20">
           <div className="text-center mb-16">
             <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mx-auto mb-6">
@@ -87,7 +88,9 @@ const AITraining = () => {
           </div>
         </div>
       </div>
-      <Footer />
+        </div>
+        <Footer />
+      </div>
     </div>
   );
 };
