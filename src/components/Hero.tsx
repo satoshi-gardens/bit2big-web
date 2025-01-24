@@ -1,7 +1,10 @@
+import Scene3D from './Scene3D';
+
 const Hero = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center px-4 pt-20 bg-background">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    <div className="min-h-screen flex items-center justify-center px-4 pt-20 bg-background relative overflow-hidden">
+      <Scene3D />
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center relative z-10">
         <div className="space-y-8">
           <h1 className="text-5xl md:text-6xl font-bold text-white leading-tight">
             Making Digital Assets Matter
