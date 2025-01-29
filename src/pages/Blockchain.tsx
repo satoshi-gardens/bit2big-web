@@ -102,7 +102,7 @@ const Blockchain = () => {
                   <ArrowRight className="w-5 h-5" />
                 </Button>
               </Link>
-            </div>
+            </Card>
           </div>
         </div>
       </div>
