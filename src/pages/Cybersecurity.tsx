@@ -16,10 +16,10 @@ const Cybersecurity = () => {
     },
     {
       icon: <Lock className="w-6 h-6 text-white" />,
-      title: "Infrastructure Security",
-      description: "Secure infrastructure design with expertise in PKI, HSM (both on-prem and cloud), and advanced Linux security hardening with SELinux.",
-      techStack: ["Azure HSM", "PKI", "SELinux", "Red Hat", "CentOS"],
-      detailedInfo: "We specialize in building robust infrastructure security solutions, implementing Hardware Security Modules (HSM), Public Key Infrastructure (PKI), and advanced Linux security hardening techniques to protect your critical systems."
+      title: "On-Premises & Hybrid Infrastructure Security",
+      description: "Comprehensive security solutions for traditional data centers and hybrid environments, including PKI infrastructure, HSM deployment, and advanced Linux security hardening.",
+      techStack: ["HSM", "PKI", "SELinux", "Red Hat", "VMware Security"],
+      detailedInfo: "We provide robust security solutions for on-premises and hybrid infrastructures, implementing Hardware Security Modules (HSM), managing Public Key Infrastructure (PKI), and applying advanced security hardening techniques for traditional and virtualized environments."
     },
     {
       icon: <Cloud className="w-6 h-6 text-white" />,
@@ -55,7 +55,8 @@ const Cybersecurity = () => {
     "Certified Ethical Hacker (CEH)",
     "ISO 27001 Implementation",
     "Docker Certified Professional",
-    "Azure Security Engineer"
+    "Azure Security Engineer",
+    "Red Hat Certified Engineer (RHCE)"
   ];
 
   return (
