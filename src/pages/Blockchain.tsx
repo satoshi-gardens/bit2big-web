@@ -1,6 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Database, Code, GraduationCap, LineChart, ArrowRight, CheckCircle2 } from "lucide-react";
+import { Database, Lightbulb, GraduationCap, LineChart, ArrowRight, CheckCircle2 } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -8,14 +8,14 @@ import { Link } from "react-router-dom";
 const Blockchain = () => {
   const services = [
     {
-      icon: <Code className="w-6 h-6 text-white" />,
-      title: "Blockchain Development",
-      description: "Custom blockchain solutions and smart contract development for your business needs.",
+      icon: <Lightbulb className="w-6 h-6 text-white" />,
+      title: "Web3 Consulting",
+      description: "Strategic guidance and advisory services for businesses entering the Web3 space.",
       features: [
-        "Smart Contract Development",
-        "DApp Creation",
-        "Blockchain Integration",
-        "Web3 Solutions"
+        "Web3 Strategy Development",
+        "Technology Assessment",
+        "Risk Analysis",
+        "Implementation Roadmap"
       ]
     },
     {
@@ -54,10 +54,10 @@ const Blockchain = () => {
               <Database className="w-8 h-8 text-white" />
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Blockchain Solutions
+              Web3 & Blockchain Solutions
             </h1>
             <p className="text-xl text-white/60 max-w-2xl mx-auto">
-              Bridging the gap between traditional finance and digital assets through innovative blockchain solutions.
+              Empowering businesses with strategic Web3 consulting, professional training, and cryptocurrency trading expertise.
             </p>
           </div>
           
@@ -89,10 +89,10 @@ const Blockchain = () => {
           <div className="mt-20 text-center">
             <Card className="p-8 bg-accent/10 border-accent/20">
               <h2 className="text-3xl font-bold text-white mb-4">
-                Ready to Start Your Blockchain Journey?
+                Ready to Transform Your Business?
               </h2>
               <p className="text-white/60 mb-8 max-w-2xl mx-auto">
-                Whether you're looking to develop blockchain solutions, learn about cryptocurrency trading, or receive professional training, we're here to help.
+                Get expert guidance on Web3 strategy, professional blockchain training, or cryptocurrency trading insights.
               </p>
               <Link to="/contact">
                 <Button 
