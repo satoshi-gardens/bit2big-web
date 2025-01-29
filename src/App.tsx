@@ -10,6 +10,7 @@ import Blockchain from "./pages/Blockchain";
 import AITraining from "./pages/AITraining";
 import AboutUs from "./pages/AboutUs";
 import ContactUs from "./pages/ContactUs";
+import Events from "./pages/Events";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +28,7 @@ const App = () => (
           <Route path="/ai-training" element={<AITraining />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/contact" element={<ContactUs />} />
+          <Route path="/events" element={<Events />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>

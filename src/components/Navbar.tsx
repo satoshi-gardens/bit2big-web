@@ -12,6 +12,7 @@ const Navbar = () => {
           <Link to="/ai-training" className="text-white/80 hover:text-white transition-colors">AI & Training</Link>
           <Link to="/cybersecurity" className="text-white/80 hover:text-white transition-colors">Cybersecurity</Link>
           <Link to="/blockchain" className="text-white/80 hover:text-white transition-colors">Blockchain</Link>
+          <Link to="/events" className="text-white/80 hover:text-white transition-colors">Events</Link>
           <Link to="/contact">
             <Button 
               className="bg-[#F2FF44] text-black hover:bg-[#E2EF34] flex items-center gap-2"
