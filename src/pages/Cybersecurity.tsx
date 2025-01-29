@@ -11,37 +11,43 @@ const Cybersecurity = () => {
       icon: <Shield className="w-6 h-6 text-white" />,
       title: "Enterprise Security Architecture",
       description: "Comprehensive security solutions including SOC/SIEM implementation, Microsoft Defender for Cloud, and hybrid cloud security architectures.",
-      techStack: ["Azure Sentinel", "Microsoft Defender", "Splunk", "ELK Stack"]
+      techStack: ["Azure Sentinel", "Microsoft Defender", "Splunk", "ELK Stack"],
+      detailedInfo: "Our enterprise security architecture service provides end-to-end protection for your organization. We implement state-of-the-art Security Operations Centers (SOC) and Security Information and Event Management (SIEM) systems, ensuring 24/7 monitoring and threat detection."
     },
     {
       icon: <Lock className="w-6 h-6 text-white" />,
       title: "Infrastructure Security",
       description: "Secure infrastructure design with expertise in PKI, HSM (both on-prem and cloud), and advanced Linux security hardening with SELinux.",
-      techStack: ["Azure HSM", "PKI", "SELinux", "Red Hat", "CentOS"]
+      techStack: ["Azure HSM", "PKI", "SELinux", "Red Hat", "CentOS"],
+      detailedInfo: "We specialize in building robust infrastructure security solutions, implementing Hardware Security Modules (HSM), Public Key Infrastructure (PKI), and advanced Linux security hardening techniques to protect your critical systems."
     },
     {
       icon: <Cloud className="w-6 h-6 text-white" />,
       title: "Cloud Security",
       description: "Implementation of secure cloud environments across Azure and AWS, with focus on compliance and best practices.",
-      techStack: ["Azure", "AWS", "OpenShift", "Docker", "Kubernetes"]
+      techStack: ["Azure", "AWS", "OpenShift", "Docker", "Kubernetes"],
+      detailedInfo: "Our cloud security services ensure that your cloud environments are secure and compliant with industry standards. We implement best practices for cloud security architecture and continuous monitoring."
     },
     {
       icon: <Terminal className="w-6 h-6 text-white" />,
       title: "SecOps Implementation",
       description: "Integration of security into DevOps pipelines, automated security testing, and continuous monitoring.",
-      techStack: ["Jenkins", "Azure DevOps", "Terraform", "Ansible"]
+      techStack: ["Jenkins", "Azure DevOps", "Terraform", "Ansible"],
+      detailedInfo: "We help organizations integrate security into their DevOps processes, ensuring that security is a fundamental part of the software development lifecycle."
     },
     {
       icon: <Users className="w-6 h-6 text-white" />,
       title: "Security Training & Awareness",
       description: "Comprehensive cybersecurity awareness programs and ethical hacking training for organizations.",
-      techStack: ["CEH", "Incident Response", "Security Awareness"]
+      techStack: ["CEH", "Incident Response", "Security Awareness"],
+      detailedInfo: "Our training programs equip your team with the knowledge and skills needed to recognize and respond to security threats effectively."
     },
     {
       icon: <Server className="w-6 h-6 text-white" />,
       title: "Compliance & Audit",
       description: "ISO 27001 compliance implementation, security audits, and continuous compliance monitoring.",
-      techStack: ["ISO 27001", "ISMS", "Audit Tools", "Compliance Frameworks"]
+      techStack: ["ISO 27001", "ISMS", "Audit Tools", "Compliance Frameworks"],
+      detailedInfo: "We assist organizations in achieving and maintaining compliance with industry standards and regulations through thorough audits and continuous monitoring."
     }
   ];
 
@@ -69,20 +75,42 @@ const Cybersecurity = () => {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {services.map((service, index) => (
-              <Card key={index} className="p-6 bg-gray-800 hover:bg-gray-700 transition-colors border-gray-700">
-                <div className="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center mb-4">
-                  {service.icon}
+              <div key={index} className="flip-card">
+                <div className="flip-card-inner">
+                  <div className="flip-card-front">
+                    <Card className="h-full p-6 bg-gray-800 hover:bg-gray-700 transition-colors border-gray-700">
+                      <div className="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center mb-4">
+                        {service.icon}
+                      </div>
+                      <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
+                      <p className="text-gray-300 mb-4">{service.description}</p>
+                      <div className="flex flex-wrap gap-2">
+                        {service.techStack.map((tech, techIndex) => (
+                          <span key={techIndex} className="px-2 py-1 bg-blue-500/10 text-blue-300 rounded-full text-sm">
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                    </Card>
+                  </div>
+                  <div className="flip-card-back">
+                    <Card className="h-full p-6 bg-gray-800 border-gray-700">
+                      <div className="flex flex-col h-full justify-center">
+                        <h3 className="text-xl font-semibold text-white mb-4">{service.title}</h3>
+                        <p className="text-gray-300 mb-6">{service.detailedInfo}</p>
+                        <div className="mt-auto">
+                          <Link to="/contact">
+                            <Button className="w-full bg-blue-500 hover:bg-blue-600">
+                              Learn More
+                              <ArrowRight className="ml-2 h-4 w-4" />
+                            </Button>
+                          </Link>
+                        </div>
+                      </div>
+                    </Card>
+                  </div>
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
-                <p className="text-gray-300 mb-4">{service.description}</p>
-                <div className="flex flex-wrap gap-2">
-                  {service.techStack.map((tech, techIndex) => (
-                    <span key={techIndex} className="px-2 py-1 bg-blue-500/10 text-blue-300 rounded-full text-sm">
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </Card>
+              </div>
             ))}
           </div>
 

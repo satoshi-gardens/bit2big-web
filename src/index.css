@@ -26,3 +26,41 @@
 .hover-lift {
   @apply transition-transform duration-300 hover:-translate-y-1;
 }
+
+/* 3D Flip Card Styles */
+.flip-card {
+  @apply relative w-full h-[400px] perspective-1000;
+}
+
+.flip-card-inner {
+  @apply relative w-full h-full transition-transform duration-700 transform-style-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  @apply rotate-y-180;
+}
+
+.flip-card-front,
+.flip-card-back {
+  @apply absolute w-full h-full backface-hidden;
+}
+
+.flip-card-back {
+  @apply rotate-y-180;
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
