@@ -1,7 +1,9 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Shield, Users, FileSearch, Cog } from "lucide-react";
+import { Shield, FileSearch, Cog, Users, Terminal, Lock, Server, Cloud, CheckCircle2, ArrowRight } from "lucide-react";
 import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const Cybersecurity = () => {
   const services = [
