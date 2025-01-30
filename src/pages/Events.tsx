@@ -38,10 +38,31 @@ const Events = () => {
 
   const EventTypeIcon = ({ type }: { type: string }) => {
     if (type === 'webinar') {
-      return <Globe className="w-4 h-4 text-blue-400" />;
+      return <Globe className="w-4 h-4" />;
     }
-    return <Building2 className="w-4 h-4 text-green-400" />;
+    return <Building2 className="w-4 h-4" />;
   };
+
+  const EventTypeBadge = ({ type }: { type: string }) => (
+    <Badge 
+      variant={type === 'webinar' ? 'secondary' : 'outline'} 
+      className="flex items-center gap-1.5 font-medium"
+    >
+      <EventTypeIcon type={type} />
+      {type === 'webinar' ? 'Online' : 'In Person'}
+    </Badge>
+  );
+
+  const LocationDisplay = ({ location, type }: { location: string, type: string }) => (
+    <div className="flex items-center gap-2 text-muted-foreground">
+      {type === 'webinar' ? (
+        <Globe className="w-4 h-4 text-muted" />
+      ) : (
+        <MapPin className="w-4 h-4 text-muted" />
+      )}
+      <span>{location}</span>
+    </div>
+  );
 
   if (isLoading) {
     return (
@@ -54,11 +75,48 @@ const Events = () => {
     );
   }
 
+  const EventCard = ({ event }: { event: Event }) => (
+    <Card key={event.id} className="glass-effect hover:shadow-lg transition-all duration-300">
+      {event.image_url && (
+        <div className="h-48 overflow-hidden rounded-t-lg">
+          <img
+            src={event.image_url}
+            alt={event.title}
+            className="w-full h-full object-cover"
+          />
+        </div>
+      )}
+      <CardHeader className="space-y-4">
+        <div className="flex items-start justify-between gap-4">
+          <CardTitle className="text-2xl font-bold text-foreground">
+            {event.title}
+          </CardTitle>
+          <EventTypeBadge type={event.type} />
+        </div>
+        <CardDescription className="space-y-2 text-base">
+          <div className="flex items-center gap-2 text-muted-foreground">
+            <Calendar className="w-4 h-4" />
+            {format(new Date(event.date), 'PPp')}
+          </div>
+          <LocationDisplay location={event.location} type={event.type} />
+        </CardDescription>
+      </CardHeader>
+      <CardContent>
+        <p className="mb-4 text-muted-foreground line-clamp-2">{event.description}</p>
+        <Link to={`/events/${event.id}`}>
+          <Button className="w-full">
+            {new Date(event.date) < new Date() ? 'View Recording' : 'View Details & Register'}
+          </Button>
+        </Link>
+      </CardContent>
+    </Card>
+  );
+
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
       <div className="container mx-auto px-4 pt-24 pb-12">
-        <h1 className="text-4xl font-bold text-white mb-8">Events & Speaking</h1>
+        <h1 className="text-4xl font-bold text-foreground mb-8">Events & Speaking</h1>
         
         <Tabs defaultValue="webinars" className="space-y-8">
           <TabsList className="grid w-full grid-cols-3 lg:w-[400px]">
@@ -70,44 +128,7 @@ const Events = () => {
           <TabsContent value="webinars" className="space-y-6">
             <div className="grid gap-6 md:grid-cols-2">
               {upcomingWebinars.map((webinar) => (
-                <Card key={webinar.id} className="glass-effect hover-lift">
-                  {webinar.image_url && (
-                    <div className="h-48 overflow-hidden rounded-t-lg">
-                      <img
-                        src={webinar.image_url}
-                        alt={webinar.title}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                  )}
-                  <CardHeader className="space-y-4">
-                    <div className="flex items-start justify-between">
-                      <CardTitle className="text-2xl font-bold text-white">
-                        {webinar.title}
-                      </CardTitle>
-                      <Badge variant="secondary" className="flex items-center gap-1">
-                        <Globe className="w-4 h-4" />
-                        Online
-                      </Badge>
-                    </div>
-                    <CardDescription className="space-y-2 text-base">
-                      <div className="flex items-center gap-2 text-white/80">
-                        <Calendar className="w-4 h-4" />
-                        {format(new Date(webinar.date), 'PPp')}
-                      </div>
-                      <div className="flex items-center gap-2 text-white/80">
-                        <MapPin className="w-4 h-4" />
-                        {webinar.location}
-                      </div>
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="mb-4 text-white/80 line-clamp-2">{webinar.description}</p>
-                    <Link to={`/events/${webinar.id}`}>
-                      <Button className="w-full">View Details & Register</Button>
-                    </Link>
-                  </CardContent>
-                </Card>
+                <EventCard key={webinar.id} event={webinar} />
               ))}
             </div>
           </TabsContent>
@@ -115,44 +136,7 @@ const Events = () => {
           <TabsContent value="speaking" className="space-y-6">
             <div className="grid gap-6 md:grid-cols-2">
               {speakingEngagements.map((engagement) => (
-                <Card key={engagement.id} className="glass-effect hover-lift">
-                  {engagement.image_url && (
-                    <div className="h-48 overflow-hidden rounded-t-lg">
-                      <img
-                        src={engagement.image_url}
-                        alt={engagement.title}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                  )}
-                  <CardHeader className="space-y-4">
-                    <div className="flex items-start justify-between">
-                      <CardTitle className="text-2xl font-bold text-white">
-                        {engagement.title}
-                      </CardTitle>
-                      <Badge variant="secondary" className="flex items-center gap-1">
-                        <Building2 className="w-4 h-4" />
-                        In Person
-                      </Badge>
-                    </div>
-                    <CardDescription className="space-y-2 text-base">
-                      <div className="flex items-center gap-2 text-white/80">
-                        <Calendar className="w-4 h-4" />
-                        {format(new Date(engagement.date), 'PPp')}
-                      </div>
-                      <div className="flex items-center gap-2 text-white/80">
-                        <MapPin className="w-4 h-4" />
-                        {engagement.location}
-                      </div>
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="mb-4 text-white/80">Speaking on: {engagement.topic}</p>
-                    <Link to={`/events/${engagement.id}`}>
-                      <Button className="w-full">Event Details</Button>
-                    </Link>
-                  </CardContent>
-                </Card>
+                <EventCard key={engagement.id} event={engagement} />
               ))}
             </div>
           </TabsContent>
@@ -160,36 +144,7 @@ const Events = () => {
           <TabsContent value="past" className="space-y-6">
             <div className="grid gap-4">
               {pastEvents.map((event) => (
-                <Card key={event.id} className="glass-effect">
-                  <CardHeader>
-                    <div className="flex items-center justify-between">
-                      <CardTitle className="text-xl text-white">{event.title}</CardTitle>
-                      <Badge variant="secondary" className="flex items-center gap-1">
-                        <EventTypeIcon type={event.type} />
-                        {event.type === 'webinar' ? 'Online' : 'In Person'}
-                      </Badge>
-                    </div>
-                    <CardDescription className="space-y-2 text-base">
-                      <div className="flex items-center gap-2 text-white/80">
-                        <Calendar className="w-4 h-4" />
-                        {format(new Date(event.date), 'PPp')}
-                      </div>
-                      <div className="flex items-center gap-2 text-white/80">
-                        <MapPin className="w-4 h-4" />
-                        {event.location}
-                      </div>
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="flex gap-4">
-                      <Link to={`/events/${event.id}`}>
-                        <Button variant="outline" className="flex items-center gap-2">
-                          View Recording
-                        </Button>
-                      </Link>
-                    </div>
-                  </CardContent>
-                </Card>
+                <EventCard key={event.id} event={event} />
               ))}
             </div>
           </TabsContent>
