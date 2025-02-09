@@ -1,3 +1,4 @@
+
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Check, Cloud, Globe, Code, Shield, Server, Lock, FileSearch } from "lucide-react";
@@ -52,7 +53,7 @@ const ITConsulting = () => {
                   <div className="mb-12">
                     <div className="flex items-center gap-3 mb-4">
                       <Server className="w-6 h-6 text-[#F2FF44]" />
-                      <h2 className="text-3xl font-bold">OnPre Security</h2>
+                      <h2 className="text-3xl font-bold">OnPrem Security</h2>
                     </div>
                     <p className="text-white/80 mb-4">
                       Specialized on-premise security solutions with expertise in HSM, PKI infrastructure, 
