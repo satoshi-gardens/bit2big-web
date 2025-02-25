@@ -1,5 +1,6 @@
+
 import { Button } from "@/components/ui/button";
-import { Mail } from "lucide-react";
+import { Mail, BookOpen } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
@@ -13,6 +14,10 @@ const Navbar = () => {
           <Link to="/cybersecurity" className="text-white/80 hover:text-white transition-colors">Cybersecurity</Link>
           <Link to="/blockchain" className="text-white/80 hover:text-white transition-colors">Blockchain</Link>
           <Link to="/events" className="text-white/80 hover:text-white transition-colors">Events</Link>
+          <Link to="/knowledge-base" className="text-white/80 hover:text-white transition-colors flex items-center gap-2">
+            <BookOpen className="w-4 h-4" />
+            Knowledge Base
+          </Link>
           <Link to="/contact">
             <Button 
               className="bg-[#F2FF44] text-black hover:bg-[#E2EF34] flex items-center gap-2"
