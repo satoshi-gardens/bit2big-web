@@ -6,18 +6,18 @@ import ComparisonTable from '@/components/cybersecurity/ComparisonTable';
 
 const KnowledgeBase = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#0F1115] to-[#1A1F2C]">
+    <div className="min-h-screen bg-[#0F1115]">
       <Navbar />
-      <div className="container mx-auto py-20">
+      <div className="container mx-auto px-4 py-24">
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight">
             Security Knowledge Base
           </h1>
-          <p className="text-xl text-gray-200 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Comprehensive resources and comparisons of security frameworks and best practices
           </p>
         </div>
-        <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 shadow-xl border border-white/5">
+        <div className="glass">
           <ComparisonTable />
         </div>
       </div>
@@ -27,3 +27,4 @@ const KnowledgeBase = () => {
 };
 
 export default KnowledgeBase;
+

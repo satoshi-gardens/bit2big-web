@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Framework, MapTabs } from '@/types/cybersecurity';
 import { frameworks, mapTabs } from './frameworkData';
@@ -14,67 +15,69 @@ const ComparisonTable = () => {
     switch (activeTab) {
       case 'overview':
         return (
-          <div className="space-y-4">
-            <h3 className="text-lg font-semibold">Framework Ecosystem Overview</h3>
-            <p className="mb-4">These five security frameworks complement each other to create a comprehensive security approach:</p>
+          <div className="space-y-6">
+            <div className="max-w-3xl">
+              <h3 className="text-xl font-semibold text-white mb-3">Framework Ecosystem Overview</h3>
+              <p className="text-gray-300 mb-6 leading-relaxed">These five security frameworks complement each other to create a comprehensive security approach:</p>
+            </div>
             
-            <div className="grid grid-cols-1 gap-4">
+            <div className="grid grid-cols-1 gap-6">
               {frameworks.map(framework => (
                 <div 
                   key={framework.id}
-                  className="border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+                  className="rounded-lg overflow-hidden bg-white/5 backdrop-blur-sm border border-white/10 transition-all duration-200 hover:border-white/20"
                 >
                   <div 
                     className="p-4 cursor-pointer flex justify-between items-center"
-                    style={{backgroundColor: framework.color, color: 'white'}}
+                    style={{backgroundColor: `${framework.color}20`}}
                     onClick={() => toggleExpand(framework.id)}
                   >
-                    <h3 className="font-bold">{framework.name}</h3>
-                    <span>{expandedFramework === framework.id ? '▲' : '▼'}</span>
+                    <h3 className="text-lg font-semibold text-white">{framework.name}</h3>
+                    <span className="text-white/80">{expandedFramework === framework.id ? '▲' : '▼'}</span>
                   </div>
                   
                   {expandedFramework === framework.id && (
-                    <div className="p-4 bg-white">
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="p-6 bg-white/5">
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
-                          <h4 className="font-semibold">Focus</h4>
-                          <p>{framework.focus}</p>
+                          <h4 className="font-semibold text-white/90 mb-2">Focus</h4>
+                          <p className="text-gray-300">{framework.focus}</p>
                         </div>
                         <div>
-                          <h4 className="font-semibold">Primary Audience</h4>
-                          <p>{framework.audience}</p>
+                          <h4 className="font-semibold text-white/90 mb-2">Primary Audience</h4>
+                          <p className="text-gray-300">{framework.audience}</p>
                         </div>
                         <div>
-                          <h4 className="font-semibold">Key Structure</h4>
-                          <p>{framework.structure}</p>
+                          <h4 className="font-semibold text-white/90 mb-2">Key Structure</h4>
+                          <p className="text-gray-300">{framework.structure}</p>
                         </div>
                         <div>
-                          <h4 className="font-semibold">Primary Use</h4>
-                          <p>{framework.use}</p>
+                          <h4 className="font-semibold text-white/90 mb-2">Primary Use</h4>
+                          <p className="text-gray-300">{framework.use}</p>
                         </div>
                       </div>
                       
-                      <div className="mt-4">
-                        <h4 className="font-semibold">Strengths</h4>
-                        <ul className="list-disc pl-5">
+                      <div className="mt-6">
+                        <h4 className="font-semibold text-white/90 mb-2">Strengths</h4>
+                        <ul className="list-disc pl-5 space-y-1">
                           {framework.strengths.map((strength, i) => (
-                            <li key={i}>{strength}</li>
+                            <li key={i} className="text-gray-300">{strength}</li>
                           ))}
                         </ul>
                       </div>
                       
-                      <div className="mt-4">
-                        <h4 className="font-semibold">Limitations</h4>
-                        <ul className="list-disc pl-5">
+                      <div className="mt-6">
+                        <h4 className="font-semibold text-white/90 mb-2">Limitations</h4>
+                        <ul className="list-disc pl-5 space-y-1">
                           {framework.limitations.map((limitation, i) => (
-                            <li key={i}>{limitation}</li>
+                            <li key={i} className="text-gray-300">{limitation}</li>
                           ))}
                         </ul>
                       </div>
                       
-                      <div className="mt-4">
-                        <h4 className="font-semibold">Relationship to Other Frameworks</h4>
-                        <p>{framework.relationship}</p>
+                      <div className="mt-6">
+                        <h4 className="font-semibold text-white/90 mb-2">Relationship to Other Frameworks</h4>
+                        <p className="text-gray-300">{framework.relationship}</p>
                       </div>
                     </div>
                   )}
@@ -395,15 +398,19 @@ const ComparisonTable = () => {
   };
   
   return (
-    <div className="p-4 max-w-6xl mx-auto">
-      <h2 className="text-2xl font-bold mb-2">Cybersecurity Frameworks: Understanding the Ecosystem</h2>
-      <p className="mb-6">Explore how these five key frameworks connect and complement each other.</p>
+    <div className="p-6 md:p-8">
+      <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Cybersecurity Frameworks: Understanding the Ecosystem</h2>
+      <p className="text-gray-300 mb-8 text-lg">Explore how these five key frameworks connect and complement each other.</p>
       
-      <div className="flex overflow-x-auto mb-6 border-b">
+      <div className="flex overflow-x-auto mb-8 gap-2 pb-2">
         {Object.entries(mapTabs).map(([key, {title, description}]) => (
           <button
             key={key}
-            className={`px-4 py-2 font-medium whitespace-nowrap ${activeTab === key ? 'border-b-2 border-blue-500 text-blue-600' : 'text-gray-600 hover:text-gray-800'}`}
+            className={`px-4 py-2 rounded-lg font-medium whitespace-nowrap transition-colors
+              ${activeTab === key 
+                ? 'bg-white/15 text-white' 
+                : 'text-gray-400 hover:text-white hover:bg-white/10'
+              }`}
             onClick={() => setActiveTab(key)}
             title={description}
           >
@@ -412,7 +419,7 @@ const ComparisonTable = () => {
         ))}
       </div>
       
-      <div className="border rounded-lg p-4 bg-white min-h-96">
+      <div className="bg-white/5 backdrop-blur-sm rounded-lg p-6 min-h-[400px]">
         {renderTabContent()}
       </div>
     </div>
@@ -420,3 +427,4 @@ const ComparisonTable = () => {
 };
 
 export default ComparisonTable;
+
