@@ -1,3 +1,4 @@
+
 import Scene3D from './Scene3D';
 
 const Hero = () => {
@@ -10,20 +11,20 @@ const Hero = () => {
             Making Digital Assets Matter
           </h1>
           <p className="text-lg text-white/80 max-w-xl">
-            Founded in Uganda with Swiss roots, bit2Big has grown into a leading provider of digital finance solutions, cybersecurity, and professional training. Our expertise in cryptocurrency trading and blockchain technology has established us as a trusted leader across Africa and Switzerland.
+            Founded in Uganda, bit2Big has grown into a leading provider of digital finance solutions, cybersecurity, and professional training. Our expertise in cryptocurrency trading and blockchain technology has established us as a trusted leader across Africa.
           </p>
           <div className="grid grid-cols-3 gap-8 pt-8">
             <div>
-              <div className="text-3xl font-bold text-white">10+</div>
-              <div className="text-white/60">Enterprise Solutions</div>
+              <div className="text-3xl font-bold text-white">3000+</div>
+              <div className="text-white/60">Clients Served</div>
             </div>
             <div>
               <div className="text-3xl font-bold text-white">5+</div>
               <div className="text-white/60">Years Experience</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-white">100%</div>
-              <div className="text-white/60">Client Satisfaction</div>
+              <div className="text-3xl font-bold text-white">98%</div>
+              <div className="text-white/60">Client Rating</div>
             </div>
           </div>
         </div>

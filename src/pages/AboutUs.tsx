@@ -26,10 +26,9 @@ const AboutUs = () => {
                   <h2 className="text-2xl font-bold">Our Company</h2>
                 </div>
                 <p className="text-white/80">
-                  Founded in Uganda and conceived with Swiss inspiration, bit2Big emerged 
-                  with a vision to bridge the technological gap between continents. Our 
-                  commitment to excellence and innovation drives us to deliver cutting-edge 
-                  solutions that empower businesses across Africa and Switzerland.
+                  Founded in Uganda, bit2Big emerged with a vision to bridge the technological gap 
+                  between continents. Our commitment to excellence and innovation drives us to deliver 
+                  cutting-edge solutions that empower businesses across Africa.
                 </p>
               </div>
               
@@ -54,12 +53,8 @@ const AboutUs = () => {
               </div>
               <div className="grid md:grid-cols-4 gap-8">
                 <div className="glass-effect p-6 rounded-xl">
-                  <h3 className="font-semibold mb-2">Switzerland (HQ)</h3>
-                  <p className="text-white/60">Our global headquarters, leading innovation and strategy</p>
-                </div>
-                <div className="glass-effect p-6 rounded-xl">
                   <h3 className="font-semibold mb-2">Uganda</h3>
-                  <p className="text-white/60">East African hub for technology solutions and home to Counter 25 OTC desks</p>
+                  <p className="text-white/60">Our headquarters, leading innovation and strategy</p>
                 </div>
                 <div className="glass-effect p-6 rounded-xl">
                   <h3 className="font-semibold mb-2">Nigeria</h3>

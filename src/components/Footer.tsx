@@ -21,9 +21,6 @@ const Footer = () => {
             <p className="text-white/60">
               Leading IT consulting and technology solutions provider across Africa and Europe.
             </p>
-            <p className="text-white/60">
-              CHE-226.490.316 MWST
-            </p>
             <div className="flex space-x-4">
               <Button variant="ghost" size="icon" className="hover:bg-white/10" onClick={() => window.open('https://twitter.com/bit2big', '_blank')}>
                 <Twitter className="w-5 h-5" />
@@ -60,7 +57,6 @@ const Footer = () => {
           <div className="space-y-4">
             <h4 className="text-lg font-semibold text-white">Contact</h4>
             <ul className="space-y-2">
-              <li className="text-white/60">Switzerland (HQ)</li>
               <li className="text-white/60">Uganda</li>
               <li className="text-white/60">Nigeria</li>
               <li className="text-white/60">Rwanda</li>
