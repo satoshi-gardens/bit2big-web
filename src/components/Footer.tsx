@@ -19,7 +19,7 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="text-2xl font-bold text-white">bit2Big</h3>
             <p className="text-white/60">
-              Leading IT consulting and technology solutions provider across Africa and Europe.
+              Leading IT consulting and technology solutions provider across Africa.
             </p>
             <div className="flex space-x-4">
               <Button variant="ghost" size="icon" className="hover:bg-white/10" onClick={() => window.open('https://twitter.com/bit2big', '_blank')}>
@@ -57,12 +57,12 @@ const Footer = () => {
           <div className="space-y-4">
             <h4 className="text-lg font-semibold text-white">Contact</h4>
             <ul className="space-y-2">
-              <li className="text-white/60">Uganda</li>
+              <li className="text-white/60">Uganda (HQ)</li>
               <li className="text-white/60">Nigeria</li>
               <li className="text-white/60">Rwanda</li>
+              <li className="text-white/60">+256 761 312 897</li>
             </ul>
           </div>
-          
         </div>
         
         <div className="mt-12 pt-8 border-t border-white/10">

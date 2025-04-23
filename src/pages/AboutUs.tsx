@@ -13,7 +13,7 @@ const AboutUs = () => {
             About bit2Big
           </h1>
           <p className="text-lg text-white/60 max-w-3xl mx-auto">
-            Leading IT consulting and technology solutions provider across Africa and Europe
+            Leading IT consulting and technology solutions provider across Africa
           </p>
         </section>
 
@@ -27,8 +27,8 @@ const AboutUs = () => {
                 </div>
                 <p className="text-white/80">
                   Founded in Uganda, bit2Big emerged with a vision to bridge the technological gap 
-                  between continents. Our commitment to excellence and innovation drives us to deliver 
-                  cutting-edge solutions that empower businesses across Africa.
+                  across Africa. Our commitment to excellence and innovation drives us to deliver 
+                  cutting-edge solutions that empower businesses across the continent.
                 </p>
               </div>
               
@@ -49,11 +49,11 @@ const AboutUs = () => {
             <div className="mt-12">
               <div className="flex items-center gap-4 mb-6">
                 <Globe className="w-8 h-8 text-[#F2FF44]" />
-                <h2 className="text-2xl font-bold">Global Presence</h2>
+                <h2 className="text-2xl font-bold">Regional Presence</h2>
               </div>
-              <div className="grid md:grid-cols-4 gap-8">
+              <div className="grid md:grid-cols-3 gap-8">
                 <div className="glass-effect p-6 rounded-xl">
-                  <h3 className="font-semibold mb-2">Uganda</h3>
+                  <h3 className="font-semibold mb-2">Uganda (HQ)</h3>
                   <p className="text-white/60">Our headquarters, leading innovation and strategy</p>
                 </div>
                 <div className="glass-effect p-6 rounded-xl">

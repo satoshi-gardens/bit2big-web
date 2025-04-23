@@ -17,7 +17,8 @@ const Events = () => {
       const { data, error } = await supabase
         .from('events')
         .select('*')
-        .order('date', { ascending: true });
+        .order('date', { ascending: true })
+        .gte('date', new Date().toISOString());
       
       if (error) throw error;
       return data as Event[];
@@ -25,15 +26,11 @@ const Events = () => {
   });
 
   const upcomingWebinars = events?.filter(event => 
-    event.type === 'webinar' && new Date(event.date) > new Date()
+    event.type === 'webinar'
   ) || [];
 
   const speakingEngagements = events?.filter(event => 
-    event.type === 'conference' && new Date(event.date) > new Date()
-  ) || [];
-
-  const pastEvents = events?.filter(event => 
-    new Date(event.date) < new Date()
+    event.type === 'conference'
   ) || [];
 
   const EventTypeIcon = ({ type }: { type: string }) => {
@@ -119,10 +116,9 @@ const Events = () => {
         <h1 className="text-4xl font-bold text-foreground mb-8">Events & Speaking</h1>
         
         <Tabs defaultValue="webinars" className="space-y-8">
-          <TabsList className="grid w-full grid-cols-3 lg:w-[400px]">
+          <TabsList className="grid w-full grid-cols-2 lg:w-[400px]">
             <TabsTrigger value="webinars">Webinars</TabsTrigger>
             <TabsTrigger value="speaking">Speaking</TabsTrigger>
-            <TabsTrigger value="past">Past Events</TabsTrigger>
           </TabsList>
 
           <TabsContent value="webinars" className="space-y-6">
@@ -137,14 +133,6 @@ const Events = () => {
             <div className="grid gap-6 md:grid-cols-2">
               {speakingEngagements.map((engagement) => (
                 <EventCard key={engagement.id} event={engagement} />
-              ))}
-            </div>
-          </TabsContent>
-
-          <TabsContent value="past" className="space-y-6">
-            <div className="grid gap-4">
-              {pastEvents.map((event) => (
-                <EventCard key={event.id} event={event} />
               ))}
             </div>
           </TabsContent>

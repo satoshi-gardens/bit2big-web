@@ -44,10 +44,10 @@ const ContactUs = () => {
                     <Mail className="w-6 h-6 text-[#F2FF44]" />
                     contact@bit2big.com
                   </a>
-                  <a href="tel:+41123456789" 
+                  <a href="tel:+256761312897" 
                      className="flex items-center gap-3 text-white/80 hover:text-white transition-colors">
                     <Phone className="w-6 h-6 text-[#F2FF44]" />
-                    +41 12 345 67 89
+                    +256 761 312 897
                   </a>
                 </div>
 
@@ -56,11 +56,7 @@ const ContactUs = () => {
                   <div className="space-y-3">
                     <div className="flex items-center gap-2">
                       <MapPin className="w-5 h-5 text-[#F2FF44]" />
-                      <span>Switzerland (HQ)</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <MapPin className="w-5 h-5 text-[#F2FF44]" />
-                      <span>Uganda</span>
+                      <span>Uganda (HQ)</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <MapPin className="w-5 h-5 text-[#F2FF44]" />
